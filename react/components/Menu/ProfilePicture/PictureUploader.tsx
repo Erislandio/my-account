@@ -28,7 +28,7 @@ class PictureUploader extends Component<Props> {
         this.setState({ error: 'alert.unknownError', isLoading: false })
       }
     } else {
-      this.setState({ error: 'alert.fileTooBig' })
+      this.setState({ error: 'vtex.store-messages@0.x::alert.fileTooBig' })
     }
   }
 
@@ -45,8 +45,8 @@ class PictureUploader extends Component<Props> {
     const { currentPicture } = this.props
     const { error, isLoading, finishedUpload } = this.state
     const boxText = finishedUpload
-      ? 'upload.photoUpdated'
-      : 'upload.dragYourPhoto'
+      ? 'vtex.store-messages@0.x::upload.photoUpdated'
+      : 'vtex.store-messages@0.x::upload.dragYourPhoto'
 
     return (
       <Fragment>
@@ -64,7 +64,7 @@ class PictureUploader extends Component<Props> {
               <Fragment>
                 <Spinner />
                 <div className="mt8 f5 tc gray">
-                  <FormattedMessage id="upload.loading" />
+                  <FormattedMessage id="vtex.store-messages@0.x::upload.loading" />
                 </div>
               </Fragment>
             ) : (
@@ -82,11 +82,11 @@ class PictureUploader extends Component<Props> {
                         block
                         size="small"
                         onClick={this.handleCloseClick}>
-                        <FormattedMessage id="upload.save" />
+                        <FormattedMessage id="vtex.store-messages@0.x::upload.save" />
                       </Button>
                     </div>
                     <Button block size="small" variation="secondary">
-                      <FormattedMessage id="upload.chooseAgain" />
+                      <FormattedMessage id="vtex.store-messages@0.x::upload.chooseAgain" />
                     </Button>
                   </Fragment>
                 ) : (
@@ -94,12 +94,12 @@ class PictureUploader extends Component<Props> {
                     <div className="flex w-100 items-center mb6">
                       <div className="flex-auto bt b--muted-4" />
                       <span className="mh3 c-muted-1">
-                        <FormattedMessage id="upload.or" />
+                        <FormattedMessage id="vtex.store-messages@0.x::upload.or" />
                       </span>
                       <div className="flex-auto bt b--muted-4" />
                     </div>
                     <Button block size="small">
-                      <FormattedMessage id="upload.choosePhoto" />
+                      <FormattedMessage id="vtex.store-messages@0.x::upload.choosePhoto" />
                     </Button>
                   </Fragment>
                 )}
